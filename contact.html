@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak - Viola Salwa Firnanda</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="portfolio.html">Karya Saya</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ====== PAGE HEADER ====== -->
+  <div class="page-header">
+    <div class="page-header-content">
+      <h1>Kontak Saya</h1>
+      <p>Hubungi saya melalui media sosial di bawah ini 💬</p>
+    </div>
+  </div>
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section class="contact-section fancy-contact">
+    <div class="contact-container">
+      <div class="contact-header">
+        <h2>Terhubung Dengan Saya</h2>
+        <p>Saya selalu terbuka untuk kolaborasi, diskusi, atau sekadar berbagi ide!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="icon">📱</div>
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/62895600408682" target="_blank">+62 8956-0040-8682</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon">📧</div>
+          <h4>Email</h4>
+          <a href="mailto:violasalwa2004@gmail.com">violasalwa2004@gmail.com</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon">📸</div>
+          <h4>Instagram</h4>
+          <a href="https://instagram.com/violasalwa_" target="_blank">@violasalwa_</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon">📍</div>
+          <h4>Lokasi</h4>
+          <p>Pontianak, Indonesia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Viola Salwa Firnanda</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+
+</body>
+</html>

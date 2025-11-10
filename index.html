@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viola Salwa Firnanda - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="portfolio.html">Karya Saya</a></li>
+        <li><a href="skills.html">Skills</a></li> 
+        <li><a href="contact.html">Contact</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ====== HERO SECTION (Foto di kiri) ====== -->
+  <section class="hero hero-left">
+    <div class="hero-content">
+      <div class="hero-image">
+        <div class="profile-circle">
+          <img src="image/profile.jpeg" alt="Viola Salwa Firnanda" />
+        </div>
+      </div>
+      <div class="hero-text">
+        <h1>Hai, Saya <span style="color: #bcd3ff;">Viola Salwa Firnanda</span>!</h1>
+        <div class="subtitle">Front-End Developer & Web Designer</div>
+        <div class="hero-buttons">
+          <a href="portfolio.html" class="btn btn-primary">Lihat Karya</a>
+          <a href="contact.html" class="btn btn-secondary">Hubungi Saya</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT SECTION ====== -->
+  <section class="about-section">
+    <div class="about-container">
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya adalah mahasiswi Politeknik Negeri Pontianak, Program Studi Teknik Informatika.
+Saya memiliki ketertarikan pada teknologi dan desain, serta berupaya menciptakan solusi digital yang tidak hanya berfungsi baik, tetapi juga memberikan pengalaman yang menyenangkan bagi pengguna.
+      </p>
+      <p>
+        Saya berfokus untuk terus mengembangkan keterampilan di bidang front-end development, UI/UX design, dan teknologi web modern.
+Setiap proyek saya anggap sebagai peluang untuk menghadirkan solusi yang inovatif, fungsional, dan berorientasi pada pengguna.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <p>© 2025 Viola Salwa Firnanda</p>
+  </footer>
+
+  <!-- ====== NAVBAR SCROLL SCRIPT ====== -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+
+</body>
+</html>

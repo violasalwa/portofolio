@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio - Viola Salwa Firnanda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="portfolio.html" class="active">Karya Saya</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-content">
+      <h1>Portofolio</h1>
+      <p>Beberapa karya yang pernah saya buat</p>
+    </div>
+  </div>
+
+  <!-- PROJECTS SECTION -->
+  <section class="projects-section">
+    <div class="projects-container">
+      <div class="projects-grid">
+        
+        <div class="project-card">
+          <div class="project-image">
+            <img src="image/website pikk.jpg" alt="Website PIKK">
+          </div>
+          <div class="project-info">
+            <h3>Website PIKK</h3>
+            <p>Website sederhana yang menampilkan informasi tentang Perkumpulan Inovasi Kata Karsa.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="image/website edu tech.jpg" alt="Website Edu Tech">
+          </div>
+          <div class="project-info">
+            <h3>Website ExpoEdu Tech</h3>
+            <p>Website event edukatif dengan layout modern dan responsif.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="image/Aplikasi Our English Quiz.png" alt="Aplikasi Flutter">
+          </div>
+          <div class="project-info">
+            <h3>Aplikasi Flutter Our English Quiz</h3>
+            <p>Aplikasi mobile untuk komunitas penggemar dengan tampilan ringan dan elegan.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Viola Salwa Firnanda </p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+
+</body>
+</html>
