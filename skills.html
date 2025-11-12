@@ -7,22 +7,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ====== NAVBAR ====== -->
-  <header class="navbar">
+
+  <!-- ====== NAVBAR (disamakan dengan halaman lain) ====== -->
+  <nav class="navbar" id="navbar">
     <div class="nav-container">
       <ul class="nav-links">
         <li><a href="index.html">Beranda</a></li>
-        <li><a href="portfolio.html">Karya Saya</a></li>
+        <li><a href="portfolio.html">Projects</a></li>
         <li><a href="skills.html" class="active">Skills</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-  </header>
+  </nav>
 
   <!-- ====== PAGE HEADER ====== -->
   <section class="page-header">
     <h1>Kemampuan Saya</h1>
-    <p>Berikut adalah keahlian teknis dan kemampuan pribadi yang saya miliki dan terus saya kembangkan.</p>
+    <p>Berikut keahlian teknis dan kemampuan pribadi yang saya miliki.</p>
   </section>
 
   <!-- ====== HARD SKILLS ====== -->
@@ -125,9 +126,28 @@
     </div>
   </section>
 
-  <!-- ====== FOOTER ====== -->
   <footer class="footer">
-    <p>© 2025 Viola | Portfolio</p>
-  </footer>
+  <p>© 2025 Viola Salwa Firnanda</p>
+  <div class="socials">
+    <a href="https://instagram.com/violasalwa_" target="_blank">
+      <img src="image/icon/instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.linkedin.com/in/viola-salwa-firnanda-127546269/" target="_blank">
+      <img src="image/icon/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/violasalwa" target="_blank">
+      <img src="image/icon/github.png" alt="GitHub">
+    </a>
+  </div>
+</footer>
+
+  <script>
+    // Efek scroll untuk navbar seperti di halaman lain
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+
 </body>
 </html>

@@ -17,7 +17,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f5f7fa;
+  background: #ffffff;
   color: var(--text-dark);
   line-height: 1.6;
   overflow-x: hidden;
@@ -33,7 +33,7 @@ section, .page-header, .navbar {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ====== NAVBAR (CLEAN + TRANSPARAN + FRAME LUAR HALUS) ====== */
+/* ====== NAVBAR ====== */
 .navbar {
   position: fixed;
   top: 15px;
@@ -44,8 +44,8 @@ section, .page-header, .navbar {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2); /* garis lembut */
-  border-radius: 20px; /* sudut halus */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
   padding: 14px 0;
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -54,7 +54,6 @@ section, .page-header, .navbar {
   transition: all 0.4s ease;
 }
 
-/* Saat discroll – tetap elegan tapi lebih terang */
 .navbar.scrolled {
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -72,6 +71,7 @@ section, .page-header, .navbar {
   display: flex;
   list-style: none;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -83,7 +83,6 @@ section, .page-header, .navbar {
   transition: color 0.3s ease;
 }
 
-/* Garis bawah halus saat hover */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -100,7 +99,6 @@ section, .page-header, .navbar {
   width: 100%;
 }
 
-/* Saat discroll, warna berubah ke biru */
 .navbar.scrolled .nav-links a {
   color: var(--primary);
 }
@@ -109,7 +107,6 @@ section, .page-header, .navbar {
   background: var(--primary);
 }
 
-/* ANIMASI MASUK */
 @keyframes fadeInNav {
   from {
     opacity: 0;
@@ -121,7 +118,6 @@ section, .page-header, .navbar {
   }
 }
 
-
 /* ====== HERO SECTION ====== */
 .hero {
   background: linear-gradient(135deg, #1e50b8 0%, #003ea3 100%);
@@ -130,7 +126,7 @@ section, .page-header, .navbar {
   justify-content: center;
   color: white;
   padding: 120px 40px;
-  min-height: 550px; /* lebih pendek, tidak full layar */
+  min-height: 550px;
 }
 
 .hero-content {
@@ -163,6 +159,7 @@ section, .page-header, .navbar {
 .hero-buttons {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -213,7 +210,6 @@ section, .page-header, .navbar {
   object-fit: cover;
 }
 
-/* ====== HERO LEFT VERSION (foto kiri, teks kanan) ====== */
 .hero.hero-left .hero-content {
   flex-direction: row-reverse;
 }
@@ -239,19 +235,8 @@ section, .page-header, .navbar {
 .about-container h2 {
   font-size: 38px;
   color: var(--primary);
-  position: relative;
   display: inline-block;
   margin-bottom: 25px;
-}
-
-.about-container h2::after {
-  content: "";
-  width: 80px;
-  height: 3px;
-  background: var(--primary);
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 2px;
 }
 
 .about-container p {
@@ -337,7 +322,7 @@ section, .page-header, .navbar {
   font-size: 15px;
 }
 
-/* ====== CONTACT SECTION (modern & rapi) ====== */
+/* ====== CONTACT SECTION ====== */
 .fancy-contact {
   background: linear-gradient(135deg, #f6f9ff 0%, #ffffff 100%);
   padding: 100px 30px;
@@ -368,7 +353,6 @@ section, .page-header, .navbar {
   gap: 30px;
 }
 
-/* ====== KARTU KONTAK ====== */
 .contact-card {
   background: white;
   border-radius: 15px;
@@ -381,7 +365,7 @@ section, .page-header, .navbar {
   align-items: center;
   justify-content: center;
   word-wrap: break-word;
-  overflow-wrap: break-word; /* biar email panjang gak keluar kotak */
+  overflow-wrap: break-word;
 }
 
 .contact-card:hover {
@@ -403,14 +387,13 @@ section, .page-header, .navbar {
   margin-bottom: 10px;
 }
 
-/* ====== TEKS KONTAK ====== */
 .contact-card a,
 .contact-card p {
   color: var(--text-dark);
   font-size: 15px;
   text-decoration: none;
   transition: color 0.3s;
-  word-break: break-all; /* cegah teks panjang keluar area */
+  word-break: break-all;
   text-align: center;
   line-height: 1.5;
   display: inline-block;
@@ -422,104 +405,77 @@ section, .page-header, .navbar {
   text-decoration: underline;
 }
 
-/* ====== RESPONSIVE ====== */
-@media (max-width: 768px) {
-  .fancy-contact {
-    padding: 60px 20px;
-  }
-
-  .contact-header h2 {
-    font-size: 28px;
-  }
-
-  .contact-grid {
-    gap: 20px;
-  }
-
-  .contact-card {
-    padding: 25px 15px;
-  }
-}
-
 /* ====== FOOTER ====== */
 .footer {
-  background: #f9fbff;
+  background: linear-gradient(135deg, #1e50b8 0%, #003ea3 100%);
+  color: white;
   text-align: center;
-  padding: 25px 10px;
-  color: #555;
-  font-size: 14px;
-  border-top: 1px solid #e3e9f6;
-  margin-top: 40px;
+  padding: 25px 15px;
+  margin-top: 80px;
 }
 
-/* ====== RESPONSIVE DESIGN ====== */
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 38px;
-  }
-
-  .hero-image .profile-circle {
-    width: 230px;
-    height: 230px;
-  }
-
-  .about-section {
-    padding: 60px 20px;
-  }
-
-  .page-header {
-    padding: 120px 20px 60px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-section {
-    padding: 60px 20px;
-  }
-
-  .info-item {
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 18px;
-  }
-
-  .info-icon {
-    font-size: 26px;
-  }
+.footer p {
+  font-size: 15px;
+  margin-bottom: 12px;
 }
 
-/* ====== HARD SKILLS SECTION ====== */
-.skills-section {
+.footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.footer .socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.footer .socials a:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+.footer .socials img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.footer .socials a:hover img {
+  filter: brightness(1) invert(0);
+}
+
+/* ====== SKILLS SECTIONS ====== */
+.skills-section,
+.soft-skill-section {
   background: linear-gradient(135deg, #ffffff 0%, #f9fbff 100%);
   padding: 100px 30px;
   text-align: center;
 }
 
-.skills-section h2 {
+.skills-section h2,
+.soft-skill-section h2 {
   font-size: 32px;
   color: var(--primary);
   margin-bottom: 50px;
-  position: relative;
 }
 
-.skills-section h2::after {
-  content: "";
-  width: 80px;
-  height: 3px;
-  background: var(--primary);
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 2px;
+/* Hapus garis biru di bawah judul */
+.about-container h2::after,
+.skills-section h2::after,
+.soft-skill-section h2::after {
+  display: none;
 }
 
-.skills-container {
+.skills-container,
+.soft-skill-container {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
@@ -527,16 +483,18 @@ section, .page-header, .navbar {
   gap: 30px;
 }
 
-.skill-card {
-  background: #f9fbff;
+.skill-card,
+.soft-card {
+  background: white;
   border-radius: 15px;
-  padding: 35px 25px;
-  border: 1px solid #e4ebfa;
+  padding: 30px 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e4ebfa;
   transition: all 0.3s ease;
 }
 
-.skill-card:hover {
+.skill-card:hover,
+.soft-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 25px rgba(30, 80, 184, 0.15);
   border-color: var(--primary);
@@ -554,120 +512,15 @@ section, .page-header, .navbar {
   transform: scale(1.1);
 }
 
-.skill-card h3 {
-  color: var(--primary-dark);
-  font-size: 18px;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.skill-card p {
-  color: var(--text-light);
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-/* ====== SKILL ICON ====== */
-.skill-icon {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
-}
-
-.skill-card:hover .skill-icon {
-  transform: scale(1.1);
-}
-
-.skill-card h3 {
-  color: var(--primary);
-  font-size: 20px;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.skill-card p {
-  color: var(--text-light);
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-/* ====== RESPONSIVE ====== */
-@media (max-width: 768px) {
-  .skills-section {
-    padding: 60px 20px;
-  }
-
-  .skill-card {
-    padding: 25px 15px;
-  }
-
-  .skill-icon {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-/* ====== SOFT SKILLS SECTION ====== */
-.soft-skill-section {
-  background: linear-gradient(135deg, #f9fbff 0%, #ffffff 100%);
-  padding: 100px 30px;
-  text-align: center;
-}
-
-.soft-skill-section h2 {
-  font-size: 32px;
-  color: var(--primary);
-  margin-bottom: 50px;
-  position: relative;
-}
-
-.soft-skill-section h2::after {
-  content: "";
-  width: 80px;
-  height: 3px;
-  background: var(--primary);
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-
-.soft-skill-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.soft-card {
-  background: white;
-  border-radius: 15px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e4ebfa;
-  transition: all 0.3s ease;
-}
-
-.soft-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(30, 80, 184, 0.12);
-  border-color: var(--primary);
-}
-
-.soft-card .icon {
-  font-size: 36px;
-  margin-bottom: 12px;
-  color: var(--primary);
-}
-
+.skill-card h3,
 .soft-card h3 {
   color: var(--primary-dark);
   font-size: 18px;
   margin-bottom: 8px;
+  font-weight: 600;
 }
 
+.skill-card p,
 .soft-card p {
   color: var(--text-light);
   font-size: 15px;
@@ -675,17 +528,38 @@ section, .page-header, .navbar {
 }
 
 /* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+  .nav-links { flex-wrap: wrap; gap: 25px; }
+  .hero-content { flex-direction: column-reverse; text-align: center; gap: 40px; }
+  .hero-text h1 { font-size: 40px; }
+  .hero-text .subtitle { font-size: 18px; }
+  .hero-image .profile-circle { width: 250px; height: 250px; }
+}
+
 @media (max-width: 768px) {
-  .soft-skill-section {
-    padding: 60px 20px;
+  .hero { padding: 90px 20px; }
+  .navbar { width: 95%; padding: 10px; }
+  .page-header h1 { font-size: 36px; }
+  .page-header p { font-size: 16px; }
+  .about-section, .skills-section, .soft-skill-section, .fancy-contact {
+    padding: 70px 20px;
   }
-
-  .soft-card {
-    padding: 25px 15px;
-  }
-
-  .soft-card .icon {
-    font-size: 30px;
+  .project-image { height: 200px; }
+  .projects-grid { gap: 20px; }
+  .skills-container, .soft-skill-container, .contact-grid {
+    gap: 20px;
   }
 }
 
+@media (max-width: 480px) {
+  .nav-links a { font-size: 14px; }
+  .hero-text h1 { font-size: 28px; }
+  .hero-text .subtitle { font-size: 16px; }
+  .btn { padding: 10px 20px; font-size: 14px; }
+  .about-container h2 { font-size: 28px; }
+  .page-header h1 { font-size: 30px; }
+  .page-header p { font-size: 15px; }
+  .contact-card, .skill-card, .soft-card { padding: 20px 15px; }
+  .footer p { font-size: 14px; }
+  .footer .socials { flex-wrap: wrap; gap: 12px; }
+}
