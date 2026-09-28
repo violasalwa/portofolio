@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Projek | Viola Salwa Firnanda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="portfolio.html" class="active">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ====== PROJECT DETAIL CONTENT ====== -->
+  <section class="project-detail-section" style="padding-top: 140px;" id="project-container">
+    <!-- Konten akan dimuat dengan JavaScript -->
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="socials">
+      <a href="https://instagram.com/violasalwa_" target="_blank" title="Instagram">
+        <img src="image/icon/instagram.png" alt="Instagram" onerror="this.src='https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png'">
+      </a>
+      <a href="https://linkedin.com/in/violasalwafirmanda" target="_blank" title="LinkedIn">
+        <img src="image/icon/linkedin.png" alt="LinkedIn" onerror="this.src='https://img.icons8.com/ios-filled/50/ffffff/linkedin.png'">
+      </a>
+      <a href="https://github.com/violasalwa" target="_blank" title="GitHub">
+        <img src="image/icon/github.png" alt="GitHub" onerror="this.src='https://img.icons8.com/ios-filled/50/ffffff/github.png'">
+      </a>
+    </div>
+    <p style="margin-top: 20px;">© 2026 Viola Salwa Firnanda. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Data Projek (Sesuai dengan CV)
+    const projects = {
+      'burnout': {
+        title: "Website Burnout Check",
+        role: "Full Stack Developer",
+        date: "Februari 2026 - Agustus 2026",
+        location: "Pontianak, Indonesia",
+        image: "image/website burnout.png",
+        fallbackImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+        points: [
+          "Mengembangkan situs Burnout Check untuk mengukur tingkat burnout mahasiswa semester akhir menggunakan sistem penilaian berbasis poin.",
+          "Mengembangkan sistem yang mengolah hasil penilaian dan memberikan rekomendasi tindakan berdasarkan tingkat burnout pengguna.",
+          "Melakukan konsultasi dan kolaborasi dengan mahasiswa Psikologi dan dosen dalam merancang indikator, alur penilaian, serta rekomendasi yang digunakan dalam sistem.",
+          "Melakukan penelitian, analisis kebutuhan, perancangan, dan implementasi sistem sebagai bagian dari penelitian pada Program Studi Teknik Informatika, Politeknik Negeri Pontianak."
+        ]
+      },
+      'pikk': {
+        title: "Website Perkumpulan Inovasi Kata Karsa",
+        role: "Front-End Developer",
+        date: "Oktober 2025 - November 2025",
+        location: "Pontianak, Indonesia",
+        image: "image/website pikk.jpg",
+        fallbackImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+        points: [
+          "Mengembangkan keseluruhan tampilan antarmuka website Perkumpulan Inovasi Kata Karsa sebagai media informasi dan publikasi organisasi.",
+          "Mengimplementasikan desain website yang responsif dengan memperhatikan konsistensi visual dan kemudahan navigasi.",
+          "Melakukan pemeliharaan dan pembaruan website untuk memastikan informasi komunitas tersaji secara terstruktur dan mudah diakses."
+        ]
+      },
+      'english': {
+        title: "Our English Quiz",
+        role: "Mobile Application Developer",
+        date: "Juli 2025 - Agustus 2025",
+        location: "Pontianak, Indonesia",
+        image: "image/Aplikasi Our English Quiz.png",
+        fallbackImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80",
+        points: [
+          "Mengembangkan aplikasi mobile berbasis Flutter untuk pembelajaran dan latihan bahasa Inggris.",
+          "Merancang dan mengimplementasikan antarmuka aplikasi agar pengguna dapat mengerjakan kuis secara interaktif.",
+          "Mengembangkan fungsionalitas aplikasi sesuai kebutuhan pembelajaran dan melakukan pengujian untuk memastikan aplikasi berjalan dengan baik."
+        ]
+      },
+      'powers': {
+        title: "Website Organisasi POWERS POLNEP",
+        role: "Front-End Developer",
+        date: "Juli 2025 - Agustus 2025",
+        location: "Pontianak, Indonesia",
+        image: "image/website powers polnep.jpeg",
+        fallbackImage: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80",
+        points: [
+          "Mengembangkan antarmuka website organisasi POWERS POLNEP untuk menyajikan informasi dan kegiatan organisasi serta menyediakan formulir pendaftaran online bagi pengguna yang ingin bergabung.",
+          "Mengimplementasikan desain halaman website yang responsif dan terstruktur.",
+          "Menyesuaikan tampilan dan komponen antarmuka berdasarkan kebutuhan serta identitas organisasi.",
+          "Melakukan pemeliharaan dan pembaruan tampilan website untuk memastikan informasi dapat diakses dengan baik."
+        ]
+      },
+      'kasir': {
+        title: "Website Kasir PT Kalimantan Sawit Kusuma",
+        role: "Web Developer (Magang)",
+        date: "November 2025 - Januari 2026",
+        location: "Pontianak, Indonesia",
+        image: "image/website kasir.png",
+        fallbackImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+        points: [
+          "Mengembangkan website perusahaan dari tahap awal menggunakan PHP Native, mencakup perancangan struktur, tampilan, dan fungsionalitas website.",
+          "Merancang dan mengimplementasikan antarmuka website sesuai kebutuhan perusahaan.",
+          "Melakukan pemeliharaan, pembaruan, dan perbaikan fitur untuk memastikan website tetap berjalan dengan baik."
+        ]
+      },
+      'planets': {
+        title: "Animasi Buku Ajar SD: Planet-Planet",
+        role: "Animator (Adobe Animate)",
+        date: "Juli 2026",
+        location: "Pontianak, Indonesia",
+        image: "image/animasi planet.png",
+        fallbackImage: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=80",
+        points: [
+          "Membuat animasi buku ajar bertema planet untuk siswa sekolah dasar menggunakan Adobe Animate.",
+          "Menyajikan materi pengenalan planet di tata surya dengan tampilan visual yang menarik dan mudah dipahami.",
+          "Menyertakan kuis interaktif yang menarik untuk membantu siswa menguji pemahaman materi."
+        ]
+      }
+    };
+
+    // Parse URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('id');
+    const project = projects[projectId];
+
+    const container = document.getElementById('project-container');
+
+    if (project) {
+      document.title = project.title + " | Detail Projek";
+      
+      let listItems = "";
+      project.points.forEach(point => {
+        listItems += `<li>${point}</li>`;
+      });
+
+      container.innerHTML = `
+        <a href="portfolio.html" class="btn btn-secondary btn-sm" style="margin-bottom: 16px;">Kembali ke Portfolio</a>
+        
+        <div class="project-detail-hero">
+          <img src="${project.image}" alt="${project.title}" onerror="this.src='${project.fallbackImage}'">
+        </div>
+
+        <h1 class="project-detail-title">${project.title}</h1>
+
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="label">Peran</span>
+            <span class="value" style="color: var(--primary);">${project.role}</span>
+          </div>
+          <div class="meta-item">
+            <span class="label">Waktu Pengerjaan</span>
+            <span class="value">${project.date}</span>
+          </div>
+          <div class="meta-item">
+            <span class="label">Lokasi</span>
+            <span class="value">${project.location}</span>
+          </div>
+        </div>
+
+        <div class="project-description">
+          <h3>Tentang Projek</h3>
+          <ul>
+            ${listItems}
+          </ul>
+        </div>
+      `;
+    } else {
+      // Tampilkan error jika ID tidak ditemukan
+      container.innerHTML = `
+        <div style="text-align: center; padding: 100px 0;">
+          <h1 style="font-size: 40px; margin-bottom: 20px;">Projek tidak ditemukan</h1>
+          <p style="color: var(--text-muted); margin-bottom: 30px;">Maaf, projek yang Anda cari tidak ada.</p>
+          <a href="portfolio.html" class="btn btn-primary">Kembali ke Portfolio</a>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
